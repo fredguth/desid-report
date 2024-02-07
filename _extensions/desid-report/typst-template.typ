@@ -14,7 +14,8 @@
   font: (),
   fontsize: 10pt,
   sectionnumbering: none,
-  toc: true,
+  toc: false,
+  toc-depth: none,
   bib_syle: "apa",
   theme: (
     color: blue.darken(30%),
@@ -41,7 +42,7 @@
           [ #set text(font: theme.sans, size: theme.small, fill: gray.darken(50%))
             #grid(
               columns: (1fr, 1fr),
-              align(left, docid),
+              align(left, []),
               align(right, text(weight: "bold", upper[Relatório])),
             ) ],
         )
@@ -93,11 +94,12 @@
         block(above: 2em, below: 2em)[
           #outline(
             title: auto,
-            depth: none
+            depth: 1,
+            indent: auto
           );
         ]
      } 
-      place(dy:12cm, block(fill: blue.lighten(95%),width: 100%,inset: 1em,radius: 6pt)[
+      place(dy:8.5cm, block(fill: blue.lighten(95%),width: 100%,inset: 1em,radius: 6pt)[
         #for (author) in authors [
           #if author.role!= none [*#author.role*]
 
