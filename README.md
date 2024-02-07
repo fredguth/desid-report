@@ -2,16 +2,22 @@
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
 ```bash
-quarto use template <github-organization>/desid-report
+quarto use template fredguth/desid-report
 ```
 
 This will install the format extension and create an example qmd file
 that you can use as a starting place for your document.
 
-## Using
+You can also add to existing project:
 
-_TODO_: Describe how to use your format.
+```bash
+quarto add fredguth/desid-report
+```
 
+and then add to the document metadata
+```
+format:
+  DESID-Report-typst: default
+
+```
